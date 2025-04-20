@@ -1,0 +1,138 @@
+{
+  "cookies": [
+    {
+      "name": "AUTH_SESSION_ID",
+      "value": "93caa925-a4fa-48a7-85b9-bbfd1b27662f.keycloak-0-26235",
+      "domain": "auth.mangadex.org",
+      "path": "/realms/mangadex/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AUTH_SESSION_ID_LEGACY",
+      "value": "93caa925-a4fa-48a7-85b9-bbfd1b27662f.keycloak-0-26235",
+      "domain": "auth.mangadex.org",
+      "path": "/realms/mangadex/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "KEYCLOAK_SESSION_LEGACY",
+      "value": "mangadex/ecb8d291-cb66-411e-8cd8-1448542331f5/93caa925-a4fa-48a7-85b9-bbfd1b27662f",
+      "domain": "auth.mangadex.org",
+      "path": "/realms/mangadex/",
+      "expires": 1751465802.379277,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "KEYCLOAK_IDENTITY",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTIxYTI5NC01YTRmLTQwNTgtYTdhNC1jZjI2YzU2NDhkMzIifQ.eyJleHAiOjE3NTE0NjU4MDIsImlhdCI6MTc0MzY4OTgwMiwianRpIjoiZjI1MTk4NTQtZTM3Ni00NjllLWFiMDgtMTMyYzc0ZmQ2NjkwIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLm1hbmdhZGV4Lm9yZy9yZWFsbXMvbWFuZ2FkZXgiLCJzdWIiOiJlY2I4ZDI5MS1jYjY2LTQxMWUtOGNkOC0xNDQ4NTQyMzMxZjUiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2Vzc2lvbl9zdGF0ZSI6IjkzY2FhOTI1LWE0ZmEtNDhhNy04NWI5LWJiZmQxYjI3NjYyZiIsInNpZCI6IjkzY2FhOTI1LWE0ZmEtNDhhNy04NWI5LWJiZmQxYjI3NjYyZiIsInN0YXRlX2NoZWNrZXIiOiJKVUFwd2Z6VmlUS29XN19adExVYURtQnNUOXlqdGpTTEh2RWxEM1VNajVnIn0.V08can6pEOmCKS3qepAxisj_2jJGWwcGoDTfpUmsOSA",
+      "domain": "auth.mangadex.org",
+      "path": "/realms/mangadex/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_SESSION",
+      "value": "mangadex/ecb8d291-cb66-411e-8cd8-1448542331f5/93caa925-a4fa-48a7-85b9-bbfd1b27662f",
+      "domain": "auth.mangadex.org",
+      "path": "/realms/mangadex/",
+      "expires": 1751465802.379501,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "KEYCLOAK_IDENTITY_LEGACY",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI5NTIxYTI5NC01YTRmLTQwNTgtYTdhNC1jZjI2YzU2NDhkMzIifQ.eyJleHAiOjE3NTE0NjU4MDIsImlhdCI6MTc0MzY4OTgwMiwianRpIjoiZjI1MTk4NTQtZTM3Ni00NjllLWFiMDgtMTMyYzc0ZmQ2NjkwIiwiaXNzIjoiaHR0cHM6Ly9hdXRoLm1hbmdhZGV4Lm9yZy9yZWFsbXMvbWFuZ2FkZXgiLCJzdWIiOiJlY2I4ZDI5MS1jYjY2LTQxMWUtOGNkOC0xNDQ4NTQyMzMxZjUiLCJ0eXAiOiJTZXJpYWxpemVkLUlEIiwic2Vzc2lvbl9zdGF0ZSI6IjkzY2FhOTI1LWE0ZmEtNDhhNy04NWI5LWJiZmQxYjI3NjYyZiIsInNpZCI6IjkzY2FhOTI1LWE0ZmEtNDhhNy04NWI5LWJiZmQxYjI3NjYyZiIsInN0YXRlX2NoZWNrZXIiOiJKVUFwd2Z6VmlUS29XN19adExVYURtQnNUOXlqdGpTTEh2RWxEM1VNajVnIn0.V08can6pEOmCKS3qepAxisj_2jJGWwcGoDTfpUmsOSA",
+      "domain": "auth.mangadex.org",
+      "path": "/realms/mangadex/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "test_cookie",
+      "value": "CheckForPermission",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1743690694.240549,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.2.2018696152.1743689793",
+      "domain": ".mangadex.org",
+      "path": "/",
+      "expires": 1778249794.719251,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gid",
+      "value": "GA1.2.702658601.1743689795",
+      "domain": ".mangadex.org",
+      "path": "/",
+      "expires": 1743776194,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_UA-114714674-1",
+      "value": "1",
+      "domain": ".mangadex.org",
+      "path": "/",
+      "expires": 1743689854,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_N0GP6FDRPH",
+      "value": "GS1.1.1743689793.1.0.1743689800.53.0.0",
+      "domain": ".mangadex.org",
+      "path": "/",
+      "expires": 1778249800.713639,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://mangadex.org",
+      "localStorage": [
+        {
+          "name": "oidc.6c4573ae7d444f61a89c3e018839d312",
+          "value": "{\"id\":\"6c4573ae7d444f61a89c3e018839d312\",\"created\":1743689800,\"request_type\":\"si:r\",\"code_verifier\":\"e2c1c0b441f447ee8a099721e49a3c6f34de1b2f1a7b436b8165de360e1e5a2811289b611f864d5ab0c1e2f870ba6d10\",\"authority\":\"https://auth.mangadex.org/realms/mangadex\",\"client_id\":\"mangadex-frontend-stable\",\"redirect_uri\":\"https://mangadex.org/auth/login?afterAuthentication=/&shouldRedirect=true&wasPopup=false\",\"scope\":\"openid email groups profile roles\",\"extraTokenParams\":{}}"
+        },
+        {
+          "name": "md",
+          "value": "{\"metadata\":{\"modified\":1743689791283}}"
+        }
+      ]
+    },
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "rc::a",
+          "value": "Zjl4OWJ6aWgxajgz"
+        }
+      ]
+    }
+  ]
+}

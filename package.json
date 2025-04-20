@@ -1,0 +1,22 @@
+{
+  "name": "youtube-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:test": "cross-env test_env=test npx playwright test --ui --workers=1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.13.14",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "playwright": "^1.51.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
