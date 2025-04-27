@@ -47,7 +47,6 @@ export class BookDetailPage extends BasePage {
     await this.page.waitForTimeout(3000)
   }
 
-
   async getAuthors(): Promise<string[]> {
     const authorSection = this.page.locator('div.font-bold.mb-2', { hasText: 'Author' }).locator('..');
     const authors = await authorSection.locator('a.tag span').allTextContents();

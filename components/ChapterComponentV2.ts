@@ -54,6 +54,7 @@ export class ChapterComponent {
                 }
             }
 
+            
             // Exit early if no pagination exists
             if (!hasPagination) break;
 

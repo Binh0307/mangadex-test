@@ -35,18 +35,16 @@ test.describe.serial('MD List', () => {
         await page.waitForTimeout(1000)
         await mdListPage.checkSignIn();
 
-
         //await mdListPage.clickMDList(mdlistTitle);
         await mdListPage.clickMDList("name");
         const titles = await mdListPage.addItemToMDList('naruto', 0);
         await mdListPage.verifyItemInMDList(titles);
 
         await page.close();
-    })
+    }) 
 
     test('User can remove title from MD List', async ({ page }) => {
         const mdListPage = new MDListPage(page);
-
         await page.waitForTimeout(1000)
         await mdListPage.checkSignIn();
 

@@ -48,7 +48,7 @@ test.describe.serial('Test Library', () => {
         await page.goto(PAGE_URL.LIBRARY)
         await page.waitForURL(PAGE_URL.LIBRARY);
         const bookPage = new BookDetailPage(page);
-    
+
         await page.waitForTimeout(3000);
         const mangaCard = new MangaCard(page);
         await bookPage.checkSignIn();

@@ -134,6 +134,7 @@ export class ReadingPage {
         await this.page.waitForSelector('div.placeholder[data-v-42957336]', { state: 'hidden', timeout: 10000 });
         await this.page.waitForTimeout(3000)
     }
+    
     async verifyImageDisplay() {
         await this.waitForLoading();
 

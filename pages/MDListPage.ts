@@ -40,6 +40,7 @@ export class MDListPage extends BasePage {
         await this.page.locator('.manga__list .list__name').filter({ hasText: title }).click();
     }
 
+    
     async addByPos(pos: number) {
         await this.page.locator('.add-wrap .add-buttons').nth(pos).click();
         return (await this.page.locator('.add-wrap').nth(pos).locator('span.font-bold.title').innerText()).trim();

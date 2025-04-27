@@ -18,7 +18,6 @@ test.describe('Read', () => {
         const bookPage = new BookDetailPage(page);
         //await page.waitForTimeout(3000);
         await bookPage.waitForLoading();
-
         const authors = await bookPage.getAuthors();
         console.log("authors:", authors)
         const artists = await bookPage.getArtists();
