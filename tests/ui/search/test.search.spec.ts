@@ -24,8 +24,6 @@ test.describe('Search', () => {
         const basePage = new BasePage(page);
 
         await basePage.goToSection(Section.AdvancedSearch);
-        // await basePage.search('naruto');
-        // await basePage.verifySearch('naruto');
 
         const filter = new FilterComponent(page, '');
         await page.locator('button', { hasText: 'Show filters' }).click();
@@ -34,6 +32,7 @@ test.describe('Search', () => {
         await page.locator('button', { hasText: 'Search' }).click();
 
         await page.waitForTimeout(5000);
+        await basePage.verifySearch('');
 
 
         await page.close();

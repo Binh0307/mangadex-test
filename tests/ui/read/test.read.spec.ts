@@ -10,65 +10,39 @@ test.describe('Read', () => {
     test.setTimeout(600000);
 
     test.beforeEach(async ({ page }) => {
-        await page.goto("https://mangadex.org/title/2ae16e3d-f4de-4604-bb72-63dc7e16359d/innu-girl-meets-dog")
-        await page.waitForURL("https://mangadex.org/title/2ae16e3d-f4de-4604-bb72-63dc7e16359d/innu-girl-meets-dog");
+        await page.goto(PAGE_URL.BOOK)
+        await page.waitForURL(PAGE_URL.BOOK);
     })
 
-    test('All details in book detail', async ({ page }) => {
+    test('Book detail ', async ({ page }) => {
         const bookPage = new BookDetailPage(page);
-        await page.waitForTimeout(3000);
+        //await page.waitForTimeout(3000);
+        await bookPage.waitForLoading();
 
         const authors = await bookPage.getAuthors();
-        console.log("🚀 ~ file: test.read.spec.ts:17 ~ test ~ authors:",  authors)
+        console.log("authors:", authors)
         const artists = await bookPage.getArtists();
-        console.log("🚀 ~ file: test.read.spec.ts:19 ~ test ~ artists:",  artists)
+        console.log("artists:", artists)
         const genres = await bookPage.getGenres();
-        console.log("🚀 ~ file: test.read.spec.ts:21 ~ test ~ genres:",  genres)
+        console.log("genres:", genres)
         const themes = await bookPage.getThemes();
-        console.log("🚀 ~ file: test.read.spec.ts:23 ~ test ~ themes:",  themes)
+        console.log("themes:", themes)
         const demographics = await bookPage.getDemographics();
-        console.log("🚀 ~ file: test.read.spec.ts:25 ~ test ~ demographics:",  demographics)
-        const externalLinks = await bookPage.getExternalLinks();
-        console.log("🚀 ~ file: test.read.spec.ts:27 ~ test ~ externalLinks:",  externalLinks)
+        console.log("demographics:", demographics)
+        await bookPage.verifyDisplay()
 
         await page.close();
     })
 
     test('User can read a chapter', async ({ page }) => {
         const bookPage = new BookDetailPage(page);
-        await page.waitForTimeout(3000);
+        await bookPage.waitForLoading();
         await bookPage.chapter.clickChapterByNumber(2, 'Vietnamese');
         await page.close();
 
     })
 
-    test('User can change reading type', async ({ page }) => {
-        const bookPage = new BookDetailPage(page);
-        await page.waitForTimeout(3000);
-        await bookPage.chapter.clickChapterByNumber(2, 'Vietnamese');
 
-        const readPage = new ReadingPage(page);
-        await readPage.openMenu();
-        await page.waitForTimeout(3000);
-
-        await readPage.setReadingType('Long Strip');
-        await page.waitForTimeout(3000);
-        await page.close();
-    })
-
-    test('User can switch chapter', async ({ page }) => {
-        const bookPage = new BookDetailPage(page);
-        await page.waitForTimeout(3000);
-        await bookPage.chapter.clickChapterByNumber(1, 'Vietnamese');
-
-        const readPage = new ReadingPage(page);
-        await readPage.openMenu();
-        await page.waitForTimeout(3000);
-
-        await readPage.clickNextChapter();
-        await page.waitForTimeout(3000);
-        await page.close();
-    })
 
 
     test('User can read comment', async ({ page }) => {
@@ -77,40 +51,74 @@ test.describe('Read', () => {
         await bookPage.chapter.clickComment(1, 'Vietnamese');
 
         await page.waitForTimeout(3000);
+        await bookPage.verifyCommentDisplay();
 
         await page.close();
     })
 
 
-
-
-    test('Book Detail Read', async ({ page }) => {
+    test('User can read book', async ({ page }) => {
         const bookPage = new BookDetailPage(page);
-        await page.waitForTimeout(5000);
-
+        await bookPage.verifyDisplay();
 
         const title = await bookPage.chapter.getTitle(2, 'Vietnamese');
 
         console.log("Tilte: ", title);
         await bookPage.chapter.clickChapterByNumber(2, 'Vietnamese');
-        await page.waitForTimeout(3000);
-
-
         const readPage = new ReadingPage(page);
+        await readPage.waitForLoading();
+        await readPage.verifyImageDisplay();
+
+        await page.close();
+    })
+
+    test('User can change reading type', async ({ page }) => {
+        const bookPage = new BookDetailPage(page);
+        await bookPage.waitForLoading();
+
+        const title = await bookPage.chapter.getTitle(2, 'Vietnamese');
+
+        console.log("Tilte: ", title);
+        const readPage = new ReadingPage(page);
+        await bookPage.chapter.clickChapterByNumber(2, 'Vietnamese');
+        await readPage.waitForLoading();
+
         await readPage.openMenu();
-        await page.waitForTimeout(3000);
+        await readPage.waitForLoading();
 
         await readPage.setReadingType('Long Strip');
-        await page.waitForTimeout(3000);
-
+        await readPage.waitForLoading();
 
         await readPage.clickNextChapter();
-        await page.waitForTimeout(3000);
-        
+        await readPage.waitForLoading();
+
+
         const chapters = await readPage.getAvailableChapters();
         console.log("Chapters: ", chapters);
 
         await page.close();
     })
+
+    test('User can switch chapter', async ({ page }) => {
+        const bookPage = new BookDetailPage(page);
+        await bookPage.waitForLoading();
+
+        const title = await bookPage.chapter.getTitle(2, 'Vietnamese');
+
+        console.log("Tilte: ", title);
+        await bookPage.chapter.clickChapterByNumber(2, 'Vietnamese');
+        const readPage = new ReadingPage(page);
+        await readPage.waitForLoading();
+
+
+        await readPage.clickNextChapter();
+        await readPage.waitForLoading();
+
+        const chapters = await readPage.getAvailableChapters();
+        console.log("Chapters: ", chapters);
+
+        await page.close();
+    })
+
 
 })

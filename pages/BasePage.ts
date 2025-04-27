@@ -12,7 +12,6 @@ export class BasePage {
 
     constructor(page: Page) {   
         this.page = page;
-        //this.searchInput = page.locator('.placeholder-current').nth(1)
         this.searchInput = page.locator('div').filter({ hasText: /^Show filters$/ }).getByPlaceholder('Search')
     }
 
@@ -35,26 +34,7 @@ export class BasePage {
         await this.page.locator('#section-link-_titles').filter({ hasText: section }).click();
     }
 
-    // async verifySearch(searchTerm: string) {
-    //     const cards = this.page.locator('.manga-card');
-    //     await cards.first().waitFor({ state: 'visible', timeout: 5000 });
-    //     const titles = this.page.locator('.manga-card a.title span');
-    //     const count = await titles.count();
-    
-    //     if (count === 0) {
-    //         throw new Error(`❌ No search results found.`);
-    //     }
-    
-    //     for (let i = 0; i < count; i++) {
-    //         const titleText = await titles.nth(i).innerText();
-    
-    //         if (!titleText.toLowerCase().includes(searchTerm.toLowerCase())) {
-    //             throw new Error(`❌ Unexpected result: "${titleText}" does not match "${searchTerm}"`);
-    //         }
-    //     }
-    
-    //     console.log(`✅ All ${count} results contain "${searchTerm}"`);
-    // }
+
 
     async verifySearch(searchTerm: string) {
         const cards = this.page.locator('.manga-card');
